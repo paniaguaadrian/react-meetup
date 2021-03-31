@@ -1,8 +1,12 @@
+// Custom Components
+import NewMeetupForm from "../components/meetups/NewMeetupForm";
+
 const NewMeetupPage = () => {
   return (
-    <div>
-      <h1>New Meetup page</h1>
-    </div>
+    <section>
+      <h1>+ New Meetup</h1>
+      <NewMeetupForm />
+    </section>
   );
 };
 
