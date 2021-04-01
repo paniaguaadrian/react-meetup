@@ -1,5 +1,5 @@
 // React components
-// useRef => Reading inputs and reading values. Not changing it
+// 0 => useRef => Reading inputs and reading values. Not changing it
 import { useRef } from "react";
 
 // Custom components
@@ -8,7 +8,7 @@ import Card from "../ui/Card";
 // Styles
 import classes from "./NewMeetupForm.module.css";
 
-const NewMeetupForm = () => {
+const NewMeetupForm = (props) => {
   // 1=>  Create reference object and store in a variable
   const titleInpuRef = useRef();
   const imageInputRef = useRef();
@@ -30,7 +30,8 @@ const NewMeetupForm = () => {
       description: enteredDescription,
     };
 
-    console.log(meetupData);
+    // With that props example, we can create and use a function on the parent component (NewMeetup)
+    props.onAddMeetup(meetupData);
   };
 
   return (
